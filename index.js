@@ -1,5 +1,5 @@
-const express = require('express')
 require('dotenv').config()
+const express = require('express')
 const cors = require('cors')
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb')
 const jwt = require('jsonwebtoken')
@@ -52,6 +52,11 @@ const collectionTwo = client.db('yourDB').collection('your-collection-02')
 app.get('/', (req, res) => {
 
 })
+// use this if you face cors error
+// app.get("*", (__, res) => {
+//     console.log(path.join(__dirname, "dist", "index.html"));
+//     res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 
 // others routes
 /* Brands Route */
